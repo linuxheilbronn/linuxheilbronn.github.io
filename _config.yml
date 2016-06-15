@@ -15,9 +15,9 @@ description: "Gemeinschaft, die sich beruflich oder privat mit dem Betriebssyste
 
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lughn.github.io" # the base hostname & protocol for your site
+url: "http://linuxheilbronn.github.io" # the base hostname & protocol for your site
 twitter_username: linuxheilbronn
-github_username:  lughn
+github_username:  linuxheilbronn
 
 # Build settings
 markdown: kramdown
