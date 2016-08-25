@@ -1,23 +1,9 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+name: Linux Heilbronn
+url: http://linuxheilbronn.github.io
+description: Webpräsenz der Linux User Group Heilbronn
 
-# Site settings
-title: Linux User Group Heilbronn
-email:
+permalink: /:year/:month/:day/:title/
+paginate: 10
 
-#write html inside the double quotes to display in jumbotron
-description: "Gemeinschaft, die sich beruflich oder privat mit dem Betriebssystem Linux/Unix & Derivaten beschäftigt. Treffen: jeden zweiten Donnerstag im Monat"
-
-
-
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://linuxheilbronn.github.io" # the base hostname & protocol for your site
-twitter_username: linuxheilbronn
-github_username:  linuxheilbronn
-
-# Build settings
-markdown: kramdown
+gems: [jekyll-paginate]
+exclude: ['Gemfile.lock', 'Gemfile', 'Rakefile']

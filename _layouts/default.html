@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
+<head>
 
-  {% include head.html %}
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
 
-  <body>
-{% include header.html %}
-<section>
-{{content}}
-</section>
-{% include footer.html %}
-  </body>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+  <header id="header">
+    <h1><a href="/"><i class="fa fa-linux"></i> {{ site.name }}</a></h1>
+    <p>{{ site.description }}</p>
+  </header>
+
+
+
+  <div id="page">
+
+
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/archives">Archiv</a></li>
+          <li><a href="/about">Über</a></li>
+          <li><a href="/members">Mitglieder</a></li>
+          <li><a href="http://twitter.com/linuxheilbronn">Twitter</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+    <div id="content">
+      {{ content }}
+    </div>
+
+
+
+  </div>
+
+
+
+  <footer id="footer">
+    <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}. <a href="/imprint">Impressum</a></p>
+  </footer>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    });
+  </script>
+
+
+
+</body>
 </html>

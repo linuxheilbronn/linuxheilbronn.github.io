@@ -1,0 +1,22 @@
+---
+layout: default
+title: Mitglieder
+---
+
+<div id="members">
+    <ul>
+        {% for member in site.data.members %}
+        <li>
+            <p>{{ member.name }}
+            &ensp;
+            <a href="https://github.com/{{ member.github }}">
+            <i class="fa fa-github"></i>
+            </a>
+            <a href="https://twitter.com/{{ member.twitter }}">
+            <i class="fa fa-twitter"></i>
+            </a>
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
